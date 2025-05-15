@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EM Inheritance Demo</title>
+  <style>
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .em-demo-wrapper {
+      margin-top: 2rem;
+      border: 2px dashed #aaa;
+      padding: 1rem;
+    }
+
+    .parent {
+      font-size: 20px;
+      background-color: #fce4ec;
+      padding: 1rem;
+    }
+
+    .child {
+      font-size: 0.5em;
+      padding: 1em;
+      background-color: #f8bbd0;
+    }
+
+    .grandchild {
+      font-size: 2em;
+      padding: 1em;
+      background-color: #f48fb1;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">EM Inheritance Demonstration</div>
+
+  <p>This example shows how <code>em</code> units are calculated based on the font-size of the parent element (or the current element itself if defined).</p>
+
+  <div class="em-demo-wrapper">
+    <div class="parent">
+      Parent (font-size: 20px)
+      <div class="child">
+        Child (font-size: 0.5em → 10px)
+        <div class="grandchild">
+          Grandchild (font-size: 2em → 20px based on 10px)
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
